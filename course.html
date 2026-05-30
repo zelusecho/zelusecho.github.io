@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ICS4U Learning | Portfolio</title><link rel="stylesheet" href="style.css"></head><body>
+<a class="skip-link" href="#main">Skip to content</a><header class="nav"><a class="nav-logo" href="index.html"><strong>ICS4U</strong> · Portfolio</a><nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a><a href="course.html">Learning</a><a href="tutorial.html">ArrayList</a><a href="goals.html">Goals</a><a href="bibliography.html">Bibliography</a></nav><button class="nav-toggle" aria-label="Open menu"><span></span><span></span></button></header><nav class="nav-drawer"><a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a><a href="course.html">Learning</a><a href="tutorial.html">ArrayList</a><a href="goals.html">Goals</a><a href="bibliography.html">Bibliography</a></nav>
+
+
+<main id="main">
+<section class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow">Course reflection</p><h1>ICS4U <em>learning.</em></h1><p>This page shows the main concepts I worked on in ICS and how my coding improved over the course. I wanted this section to feel clear, honest, and connected to what I actually learned.</p></div></section>
+
+<section class="section learning-accordion-section"><div class="inner">
+<p class="section-label reveal">Topics covered</p>
+<h2 class="display-title reveal">What I learned,<br><em>step by step.</em></h2>
+
+<div class="learning-accordion">
+
+<article class="learning-item reveal open">
+<button class="learning-summary" type="button" aria-expanded="true"><span>01</span><strong>Object Oriented Programming</strong><em>Classes and objects</em></button>
+<div class="learning-panel">
+<div class="prose">
+<p><strong>Assignment connection:</strong> I practiced OOP through the employee assignment, where each employee had names, a birth date, and a hire date instead of everything being stored loose in one main method.</p>
+<div class="reflection-list">
+<p><strong>What I learned:</strong> OOP helped me understand that a program can be broken into smaller pieces. A class is like the blueprint, and the object is the actual thing made from it.</p>
+<p><strong>What I struggled with:</strong> At first, I wanted to put everything inside one file because that felt easier. The hard part was understanding why private variables, constructors, and methods make the program cleaner later.</p>
+<p><strong>Why it matters:</strong> Engineering and programming both need structure. OOP matters because bigger projects only stay manageable when each part has a clear job.</p>
+</div>
+</div>
+<pre><code>public class Employee {
+    private String firstName;
+    private String lastName;
+    private Date birthDate;
+    private Date hireDate;
+
+    public Employee(String first, String last,
+                    Date dateOfBirth, Date dateOfHire) {
+        firstName = first;
+        lastName = last;
+        birthDate = dateOfBirth;
+        hireDate = dateOfHire;
+    }
+}</code></pre>
+</div>
+</article>
+<article class="learning-item reveal">
+<button class="learning-summary" type="button" aria-expanded="false"><span>02</span><strong>Arrays</strong><em>Fixed size storage</em></button>
+<div class="learning-panel">
+<div class="prose">
+<p><strong>Assignment connection:</strong> I used arrays in the computer comparison program to store computer names, GPUs, CPUs, RAM, battery life, and year made.</p>
+<div class="reflection-list">
+<p><strong>What I learned:</strong> Arrays made me see how one index can connect related pieces of data. For example, index zero in each array represents the same computer.</p>
+<p><strong>What I struggled with:</strong> The hardest part was keeping the indexes lined up. If one array was in the wrong order, the computer name could match the wrong RAM or GPU, which would ruin the output.</p>
+<p><strong>Why it matters:</strong> Arrays are basic, but they build the foundation for almost everything else in ICS. They taught me how to organize repeated data instead of writing the same code over and over.</p>
+</div>
+</div>
+<pre><code>String[] name = {&quot;HP&quot;, &quot;Acer&quot;, &quot;Apple&quot;, &quot;Lenovo&quot;, &quot;Asus&quot;};
+String[] GPU = {&quot;RTX 3050&quot;, &quot;RTX 5080&quot;, &quot;RTX 3060&quot;, &quot;RTX 4060&quot;, &quot;RX 9060&quot;};
+int[] RAM = {16, 32, 8, 16, 16};
+
+for (int i = 0; i &lt; name.length; i++) {
+    System.out.println(&quot;Computer - &quot; + name[i]);
+    System.out.println(&quot;GPU - &quot; + GPU[i]);
+    System.out.println(&quot;RAM - &quot; + RAM[i] + &quot;GB&quot;);
+}</code></pre>
+</div>
+</article>
+<article class="learning-item reveal">
+<button class="learning-summary" type="button" aria-expanded="false"><span>03</span><strong>Two Dimensional Arrays</strong><em>Rows and columns</em></button>
+<div class="learning-panel">
+<div class="prose">
+<p><strong>Assignment connection:</strong> I also worked with 2D arrays in the computer assignment. Instead of separate arrays for every category, I stored related computer information in rows.</p>
+<div class="reflection-list">
+<p><strong>What I learned:</strong> A 2D array felt like a table. One row could store names, another row could store GPUs, and another row could store CPUs.</p>
+<p><strong>What I struggled with:</strong> I struggled with remembering what each row meant. The code worked better once I started commenting the rows clearly, because otherwise computers[2][i] was easy to mix up.</p>
+<p><strong>Why it matters:</strong> 2D arrays are useful when data has categories. This made me think more about how information is organized before I even start coding.</p>
+</div>
+</div>
+<pre><code>String[][] computers = {
+    {&quot;HP&quot;, &quot;Acer&quot;, &quot;Apple&quot;, &quot;Lenovo&quot;, &quot;Asus&quot;},
+    {&quot;RTX 3050&quot;, &quot;RTX 5080&quot;, &quot;RTX 3060&quot;, &quot;RTX 4060&quot;, &quot;RX 9060&quot;},
+    {&quot;i7&quot;, &quot;i5&quot;, &quot;i9&quot;, &quot;Ryzen 3&quot;, &quot;Ryzen 5&quot;}
+};
+
+System.out.println(&quot;Computer - &quot; + computers[0][i]);
+System.out.println(&quot;GPU - &quot; + computers[1][i]);
+System.out.println(&quot;CPU - &quot; + computers[2][i]);</code></pre>
+</div>
+</article>
+<article class="learning-item reveal">
+<button class="learning-summary" type="button" aria-expanded="false"><span>04</span><strong>ArrayLists</strong><em>Dynamic data</em></button>
+<div class="learning-panel">
+<div class="prose">
+<p><strong>Assignment connection:</strong> I used ArrayLists in my Bridge program to create a deck, store player hands, remove cards while dealing, and calculate points.</p>
+<div class="reflection-list">
+<p><strong>What I learned:</strong> ArrayLists felt more flexible than arrays because I could add and remove items while the program was running. That made sense for a card game because the deck changes every time cards are dealt.</p>
+<p><strong>What I struggled with:</strong> I struggled with removing from index zero because every remove shifts the list. I had to slow down and think about how the deck changes after every card is dealt.</p>
+<p><strong>Why it matters:</strong> ArrayLists are important because real programs usually do not know exactly how much data they will need. They made my code feel more realistic.</p>
+</div>
+</div>
+<pre><code>ArrayList&lt;String&gt; deck = new ArrayList&lt;&gt;();
+ArrayList&lt;String&gt; p1 = new ArrayList&lt;&gt;();
+
+for (int i = 0; i &lt; suits.length(); i++) {
+    for (int j = 0; j &lt; ranks.length(); j++) {
+        deck.add(&quot;&quot; + ranks.charAt(j) + suits.charAt(i));
+    }
+}
+
+String card1 = deck.get(0);
+deck.remove(0);
+p1.add(card1);</code></pre>
+</div>
+</article>
+<article class="learning-item reveal">
+<button class="learning-summary" type="button" aria-expanded="false"><span>05</span><strong>Searching</strong><em>Finding data</em></button>
+<div class="learning-panel">
+<div class="prose">
+<p><strong>Assignment connection:</strong> I used searching in the student marks program to prevent duplicate student numbers and to find one student by name or student number.</p>
+<div class="reflection-list">
+<p><strong>What I learned:</strong> Searching taught me that a program has to check data carefully instead of assuming the user entered something valid.</p>
+<p><strong>What I struggled with:</strong> The part I struggled with was not just finding the match, but also handling what happens when the match does not exist. A good program needs a clear not found result too.</p>
+<p><strong>Why it matters:</strong> Searching is one of the most practical skills in programming because almost every app needs to find information quickly and accurately.</p>
+</div>
+</div>
+<pre><code>public boolean exists(String num) {
+    for (int i = 0; i &lt; numbers.size(); i++) {
+        if (numbers.get(i).equals(num)) {
+            return true;
+        }
+    }
+    return false;
+}</code></pre>
+</div>
+</article>
+<article class="learning-item reveal">
+<button class="learning-summary" type="button" aria-expanded="false"><span>06</span><strong>Sorting</strong><em>Organizing data</em></button>
+<div class="learning-panel">
+<div class="prose">
+<p><strong>Assignment connection:</strong> In the student marks program, I sorted student information alphabetically and also sorted by average mark. I used index arrays so I could sort without destroying the original data.</p>
+<div class="reflection-list">
+<p><strong>What I learned:</strong> Sorting showed me that organizing data is not just about making it look nice. It makes the information easier to read, compare, and use.</p>
+<p><strong>What I struggled with:</strong> I found the index array idea confusing at first because I was not sorting the names directly. I was sorting the positions that pointed to the names, which took more thinking.</p>
+<p><strong>Why it matters:</strong> Sorting matters because raw data is messy. Once it is sorted, patterns become easier to see.</p>
+</div>
+</div>
+<pre><code>Integer[] indices = new Integer[names.size()];
+for (int i = 0; i &lt; indices.length; i++) indices[i] = i;
+
+for (int i = 1; i &lt; indices.length; i++) {
+    Integer key = indices[i];
+    int j = i - 1;
+
+    while (j &gt;= 0 &amp;&amp; names.get(indices[j])
+            .compareToIgnoreCase(names.get(key)) &gt; 0) {
+        indices[j + 1] = indices[j];
+        j--;
+    }
+    indices[j + 1] = key;
+}</code></pre>
+</div>
+</article>
+<article class="learning-item reveal">
+<button class="learning-summary" type="button" aria-expanded="false"><span>07</span><strong>Recursion</strong><em>Methods calling themselves</em></button>
+<div class="learning-panel">
+<div class="prose">
+<p><strong>Assignment connection:</strong> I practiced recursion through programs that found sums, powers, counted characters, found the greatest common divisor, and even found a lowest cost path in a grid.</p>
+<div class="reflection-list">
+<p><strong>What I learned:</strong> Recursion helped me understand that a big problem can sometimes be solved by solving a smaller version of the same problem.</p>
+<p><strong>What I struggled with:</strong> This was one of the harder topics for me. The method calling itself felt strange at first, and I had to trace the calls by hand before the base case finally made sense.</p>
+<p><strong>Why it matters:</strong> Recursion matters because it teaches a deeper type of problem solving. It forced me to think about patterns, not just loops.</p>
+</div>
+</div>
+<pre><code>public static int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+
+public static int count(String s, char c) {
+    if (s.length() == 0) return 0;
+    if (s.charAt(0) == c) return 1 + count(s.substring(1), c);
+    return count(s.substring(1), c);
+}</code></pre>
+</div>
+</article>
+<article class="learning-item reveal">
+<button class="learning-summary" type="button" aria-expanded="false"><span>08</span><strong>File Input and Output</strong><em>Saving data</em></button>
+<div class="learning-panel">
+<div class="prose">
+<p><strong>Assignment connection:</strong> I used file output in the student marks program so the program could save regular data and sorted data into text files.</p>
+<div class="reflection-list">
+<p><strong>What I learned:</strong> File output showed me that a program can create results that last after the program closes. That made the assignment feel more complete and useful.</p>
+<p><strong>What I struggled with:</strong> I struggled with remembering the try and catch structure and making sure the file was closed properly. It was also easy to forget that saving sorted data needed a separate method.</p>
+<p><strong>Why it matters:</strong> File I/O matters because real software has to store information. Without saving, the program loses everything once it stops running.</p>
+</div>
+</div>
+<pre><code>public void saveToFile() {
+    try {
+        FileWriter fw = new FileWriter(&quot;students.txt&quot;);
+        PrintWriter out = new PrintWriter(fw);
+
+        for (int i = 0; i &lt; names.size(); i++) {
+            out.println(names.get(i) + &quot;,&quot; + numbers.get(i));
+        }
+
+        out.close();
+    } catch (IOException e) {
+        System.out.println(&quot;Error saving data to file.&quot;);
+    }
+}</code></pre>
+</div>
+</article>
+<article class="learning-item reveal">
+<button class="learning-summary" type="button" aria-expanded="false"><span>09</span><strong>GUI and Event Driven Programming</strong><em>Buttons and actions</em></button>
+<div class="learning-panel">
+<div class="prose">
+<p><strong>Assignment connection:</strong> I worked with a GUI address book that used buttons for adding, deleting, changing, looking up, and saving contacts.</p>
+<div class="reflection-list">
+<p><strong>What I learned:</strong> GUI programming changed the way I thought about flow. Instead of the program just running top to bottom, it waits for the user to click something.</p>
+<p><strong>What I struggled with:</strong> I struggled with connecting the buttons to the right actions. The design looked simple, but the logic behind each button still had to be organized properly.</p>
+<p><strong>Why it matters:</strong> GUI programming matters because users do not always want to type into a console. A clean interface makes a program easier for real people to use.</p>
+</div>
+</div>
+<pre><code>addButton = new JButton(&quot;Add&quot;);
+deleteButton = new JButton(&quot;Delete&quot;);
+changeButton = new JButton(&quot;Change&quot;);
+lookupButton = new JButton(&quot;Look Up&quot;);
+saveButton = new JButton(&quot;Save&quot;);
+
+addButton.addActionListener(this);
+deleteButton.addActionListener(this);
+changeButton.addActionListener(this);
+lookupButton.addActionListener(this);
+saveButton.addActionListener(this);</code></pre>
+</div>
+</article>
+<article class="learning-item reveal">
+<button class="learning-summary" type="button" aria-expanded="false"><span>10</span><strong>Algorithm Design</strong><em>Thinking before coding</em></button>
+<div class="learning-panel">
+<div class="prose">
+<p><strong>Assignment connection:</strong> The Bridge program helped me practice algorithm design because it had clear steps: create the deck, shuffle it, deal cards, calculate points, compare scores, and print a winner.</p>
+<div class="reflection-list">
+<p><strong>What I learned:</strong> I learned that coding is easier when I know the plan first. Once the steps are clear, the code becomes less random and more like building one piece at a time.</p>
+<p><strong>What I struggled with:</strong> I struggled with making sure the score calculation matched the rules. The program had to count ranks, count suits, add extra points, and then compare all four players fairly.</p>
+<p><strong>Why it matters:</strong> Algorithm design matters because it is the difference between guessing and actually solving the problem. It is probably the biggest skill I improved in ICS.</p>
+</div>
+</div>
+<pre><code>int a = show(&quot;Player 1&quot;, p1);
+int b = show(&quot;Player 2&quot;, p2);
+int c = show(&quot;Player 3&quot;, p3);
+int d = show(&quot;Player 4&quot;, p4);
+
+int max = a;
+String win = &quot;Player 1&quot;;
+
+if (b &gt; max) {
+    max = b;
+    win = &quot;Player 2&quot;;
+}</code></pre>
+</div>
+</article>
+</div>
+</div></section>
+
+<section class="section" style="background:var(--warm);border-top:1px solid var(--line)"><div class="inner"><p class="quote-block reveal">The biggest thing I learned in ICS is that coding is not about getting everything perfect on the first try. It is about breaking the problem down, testing one piece at a time, fixing mistakes, and slowly turning an idea into something that works.</p><p class="small-note reveal">The examples on this page come from my ICS assignments and class topics. Java references and course source notes are listed on the Bibliography page.</p></div></section>
+</main><footer class="footer"><div class="footer-inner"><div><h2>ICS4U</h2><p>Designed and developed as part of my ICS4U portfolio.</p></div><div class="footer-links"><a href="index.html">Home</a><a href="tutorial.html">Tutorial</a><a href="bibliography.html">Citations</a></div></div></footer><script src="script.js"></script></body></html>
